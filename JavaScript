@@ -1,1 +1,0 @@
-This file will contain my kyu-level solutions in their respective folders.
