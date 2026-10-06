@@ -8,5 +8,8 @@ function booleanToString(b){
     return false.toString()
   } 
 }
+//After sumbitting, the following alt solution is muuuuch cleaner:
 
-
+function booleanToString(b){
+  return String(b);
+}
