@@ -1,0 +1,58 @@
+/* PROBLEM
+You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
+
+Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
+
+[]                                -->  "no one likes this"
+["Peter"]                         -->  "Peter likes this"
+["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
+["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
+["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
+Note: For 4 or more names, the number in "and 2 others" simply increases.
+
+*/
+
+/*PSEUDOCODE
+- we take in names into an array 
+- if the array is empty because parameter is empty, then we will return the phrase 'no one likes this'
+- if array has one name, we will return ${name} likes this
+- if array has two names, we will retrun 'name1 and name2 like this.'
+- if array has three names, we will return 'name1, name2 and name3 like this'
+- if array has four names, we will return 'name1, name2 and 2 others like this'
+- For 4 or more names, the number in "and 2 others" simply increases. Since we are naming two names, we can calculate this number based on the length - 2. 
+- we can use conditional logic with template literals! 
+*/
+//MY SOLUTION 
+function likes(names) {
+  if(names.length === 0){
+    return 'no one likes this'
+  }else if(names.length === 1){
+    return`${names[0]} likes this`
+  }else if(names.length === 2){
+    return `${names[0]} and ${names[1]} like this`
+  }else if(names.length === 3){
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }else{
+   return `${names[0]}, ${names[1]} and ${(names.length - 2)} others like this`
+  }
+}
+
+//ALT SOLUTION using Switch statements! 
+
+function likes(names) {
+  switch(names.length){
+    case 0:
+      return "no one likes this";
+    case 1:
+      return names[0] + " likes this";
+    case 2:
+      return names[0] + " and " + names[1] + " like this";
+    case 3:
+      return names[0] + ", " + names[1] + " and " + names[2] + " like this";
+    default: 
+      return names[0] + ", " + names[1] + " and " + (names.length-2) + " others like this";
+  }
+}
+
+
+  
