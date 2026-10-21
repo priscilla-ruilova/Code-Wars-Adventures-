@@ -25,7 +25,7 @@ function substringTest(str1, str2){
   let string1 = str1.toLowerCase();
   let string2 = str2.toLowerCase();
   
-  for(let i = 0; i < string1.length - 1; i++){
+  for(let i = 0; i < string1.length - 1; i++){ //we use the -1 because if we want to run the below code we need to make sure the loop stops counting at one index before the last index. 
     const substring = string1.substring(i, i + 2); //substring(i, i + 2) means "give me the characters from index i up to, but not including, index i + 2" 
     if (string2.includes(substring)){
       return true
