@@ -41,7 +41,7 @@ function alphabetPosition(text) {
   for (let char of text.toLowerCase()) { //loops through ever char of the text that we've turned into lowercase 
     const code = char.charCodeAt(0); //this identifies the char at the 0 index with it's UTF-16 code.
     if (code >= 97 && code <= 122) { // // This checks if the character code falls between 'a' (97) and 'z' (122)
-      result.push(code - 96); //then we will push the representative char code into the array 
+      result.push(code - 96); //This line 1)calculates the alphabet position and 2) adds that number to the result array. For ex: a = code 97, and its alphabet position is 1. 
     }
   }
   
