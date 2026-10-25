@@ -20,27 +20,27 @@ Pseudocode:
 - Fifth, helper function starts with the uppercase version of the letter, then use a while loop: as long as
   the current string isn't long enough, append the lowercase version
 - Last, going back to the main function, it returns the helper function logic into the new arr we created []
-*/ 
+*/
 //MY SOLUTION
 function accum(s) {
-  let arr = [] //name new array variable
-  for (let i = 0; i < s.length; i++) { //loop through string (s)
-  arr.push(format(s[i], i + 1)) //push to the new array the result of the helper function format()
- }
- return arr.join('-') //return the arr joined into a string by a dash
- }
+    let arr = [] //name new array variable
+    for (let i = 0; i < s.length; i++) { //loop through string (s)
+        arr.push(format(s[i], i + 1)) //push to the new array the result of the helper function format()
+    }
+    return arr.join('-') //return the arr joined into a string by a dash
+}
 function format(s, num) { // helper function takes in the string and a number (num of times a char shows up). Its purpose is to return a chuck of repeated letters
-  let letter = s.toUpperCase() //new variable showing the s string as all upppercase
-  while (letter.length !== num) { //while loop that so long as the length of upper case string is not equal to the number 
-  letter += s.toLowerCase() //then it will add the same string (s) as the lower case version 
- }
-  return letter //returns letter
- }
+    let letter = s.toUpperCase() //new variable showing the s string as all upppercase
+    while (letter.length !== num) { //while loop that so long as the length of upper case string is not equal to the number 
+        letter += s.toLowerCase() //then it will add the same string (s) as the lower case version 
+    }
+    return letter //returns letter
+}
 
- //ALT SOLUTION 
- function accum(s) {
-  return s
-    .split("") //splits the array by char
-    .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i)) //callback fun that takes in the current char and it's index (i). It returns the first c in uppercase plus the following versions of c in lowercase repeated by the number of its index
-    .join("-"); //array is joing by (-) into one big string 
+//ALT SOLUTION 
+function accum(s) {
+    return s
+        .split("") //splits the array by char
+        .map((c, i) => c.toUpperCase() + c.toLowerCase().repeat(i)) //callback fun that takes in the current char and it's index (i). It returns the first c in uppercase plus the following versions of c in lowercase repeated by the number of its index
+        .join("-"); //array is joing by (-) into one big string 
 }
