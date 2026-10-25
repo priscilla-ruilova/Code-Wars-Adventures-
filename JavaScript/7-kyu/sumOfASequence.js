@@ -14,6 +14,11 @@ Examples
 1,5,3  --> 5 (1 + 4)
 */
 /*
+PREP:
+Params: 3 non-negative integers! The first argument is the starting integer, the second argument is the ending argument, the third argument is by how many integers you should count
+Return: sum of the integers as defined by the pattern above
+Example: 2,6,2 --> 12 (2 + 4 + 6)
+
 PSEUDOCODE
 
 - we take in three non-negative integers as arguments
@@ -28,10 +33,10 @@ PSEUDOCODE
 
 //My Solution 
 const sequenceSum = (begin, end, step) => {
-  if (begin > end) return 0
-  let sum = 0
-  for (let i = begin; i <= end; i += step){
-    sum += i
+  if (begin > end) return 0 //write a conditional to meet the condition in problem. If the begin integer is higher than the end integer, return 0.
+  let sum = 0 //create a sum variable that we will return 
+  for (let i = begin; i <= end; i += step){ //run a loop given the problem conditions: i = begin instead of 0; i <= end instead of the length of a named argument; instead of i ++, i goes up by step so we write i += step
+    sum += i //the sume is equal to i since it is looped 
   }
   return sum
  }

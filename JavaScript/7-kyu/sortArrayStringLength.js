@@ -22,6 +22,6 @@ This order would ensure that the returning array is in accending order.
 
 function sortByLength (array) {
   
-  return array.sort((a, b) => a.length - b.length);
+  return array.sort((a, b) => a.length - b.length); //return the difference in lengths, and the sign of that number (+, -) tells the comparator function what element should come before the other. Comparator function is called over and over, on whatever pairs the sort algorithm decides to compare. Order does not matter. Each call is independent. Don't think of the comparator as "checking the array." Think of it as "being asked a question, many times, about pairs the sort algorithm picks." It will make sure to compare all the options and then guage the order.
 }
 
