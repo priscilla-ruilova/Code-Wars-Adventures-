@@ -13,4 +13,4 @@ let a = "code";
 let b = "wa.rs";
 let name = a + b;
 
-//They were using a comparator function instead of assigning variables.
+//They were using a comparator function instead of assigning variables. The double equal sign should be single. 
