@@ -16,8 +16,7 @@ Params: num from 0-100 representing a %
 Return: a string "[##...]", every the # represents every factor of 20
 Example: 70 => '[###..]'
 PSEUDOCODE:
-- declare a variable = empty string
-- write a set of if conditionals that will push to the empty string 
+- write a set of if conditionals that return the strings of battery bars
 */
 //MY SOLUTION
 function batteryBars(percent) {
